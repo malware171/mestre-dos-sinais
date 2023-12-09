@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+   font-family: 'Inter';
+
+   src: url('./fonts/Inter-Black.ttf');
+   src: url('./fonts/Inter-Bold.ttf');
+   src: url('./fonts/Inter-ExtraBold.ttf');
+   src: url('./fonts/Inter-ExtraLight.ttf');
+   src: url('./fonts/Inter-Light.ttf');
+   src: url('./fonts/Inter-Medium.ttf');
+   src: url('./fonts/Inter-Regular.ttf');
+   src: url('./fonts/Inter-SemiBold.ttf');
+   src: url('./fonts/Inter-Thin.ttf');
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="never">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <title>Mestre dos Sinais</title>
+</head>
+<body>
+<div class="flex min-h-screen flex-col justify-center items-center bg-black">
+  <div class="mb-8 mt-4">
+    <article class="bg-no-repeat w-24 h-24 justify-center mx-auto bg-secundaria p-2 rounded-3xl">
+      <img src="./img/saudacao.png" alt="">
+    </article>
+  </div>
+  <div class="w-72 max-w-md text-white rounded-3xl bg-secundaria px-4 py-4 drop-shadow-[0_5px_12px_rgba(0,36,89,1)] md:w-screen  md:py-7">
+    <div class="mb-7">
+      <h1 class="text-center text-3xl font-bold font-inter text-titulos mt-3">Crie sua conta</h1>
+      <h2 class="text-neutral-500 text-center text-sm font-inter">Escolha seu nome de usuário para aproveitar o nosso site.</h2>
+    </div>
+    <form id="form" class="flex flex-col gap-4">
+
+      <div id="msgError" class="text-center text-red-600  font-inter p-1 font-semibold hidden">Ainda é necessário preencher alguns campos !</div>
+      <div id="msgSucess" class="text-center text-green-600  font-inter p-1 font-semibold hidden">Criando Usuário !</div>
+
+      <div>
+         <input type="text" placeholder="Nome de usúario" oninput="nameValidate()" id="username" class="inputs required border border-fundo-input  text-texto-input w-full rounded-full bg-fundo-input p-3 drop-shadow-[0_2px_6px_rgba(19,18,66,0.25)] font-inter focus:outline-none focus:ring-botao-header focus:border-botao-header md:p-4" required/>
+         <span class="span-required text-sm text-red-500 hidden">Nome deve conter no minimo 3 caracteres</span>
+        </div>
+      <div>
+        <input type="email" placeholder="Email" id="email" oninput="emailValidate()" class="inputs required  border border-fundo-input text-texto-input w-full rounded-full bg-fundo-input p-3 drop-shadow-[0_2px_6px_rgba(19,18,66,0.25)] font-inter focus:outline-none focus:ring-botao-header focus:border-botao-header  md:p-4" required/>
+        <span class="span-required text-sm text-red-500 hidden">Digite um email valido</span>
+      </div>
+      <div>
+        <input type="password" placeholder="Senha" oninput="passwordValidate()" id="password" class="inputs required border border-fundo-input w-full rounded-full bg-fundo-input p-3 drop-shadow-[0_2px_6px_rgba(19,18,66,0.25)] text-texto-input font-inter focus:outline-none focus:ring-botao-header focus:border-botao-header md:p-4" required/>
+        <span class="span-required text-sm text-red-500 hidden">Digite uma senha com no minimo 8 caracteres</span>
+      </div>
+      <div>
+        <input type="password" placeholder="Confirmar Senha" oninput="confirmPassword()" id="password" class="inputs required border border-fundo-input w-full rounded-full bg-fundo-input p-3 drop-shadow-[0_2px_6px_rgba(19,18,66,0.25)] text-texto-input font-inter focus:outline-none focus:ring-botao-header focus:border-botao-header md:p-4" required/>
+        <span class="span-required text-sm text-red-500 hidden">A senha digitada não coincidem.</span>
+      </div>
+
+      <div class="text-white appearance-none checked:bg-blue-500 font-light mt-4 ml-2 text-left font-inter ">
+        <input type="checkbox" id="checkbox" required>
+        <span>Concordo com os termos e serviços do Mestre dos Sinais</span>
+      </div>     
+      <button  onclick="cadastrar(event)" class="font-inter text-white  font-semibold bg-botao-header py-3 px-4 w-full rounded-full mb-4 drop-shadow-[0_8px_10px_rgba(10,88,202,0.80)] hover:bg-blue-700 transition-all md:py-4 md:px-5 ">Criar conta</button> 
+      <div class="font-semibold text-center">
+        <span class="text-neutral-500">Já tem uma conta?</span> <a href="./loginPage.html" class="text-botao-header hover:text-sky-500 transition-all ">Faça login</a>
+      </div>
+    </form>
+  </div>
+  </div>
+  <script src="./scripts/formValidate.js"></script>
+</body>
+</html>

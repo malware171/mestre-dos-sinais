@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-br"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="never">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link href="../dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"  rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <title>Mestre dos Sinais</title>
+</head>
+<body class=" bg-slate-950  h-screen flex flex-col min-h-screen">
+   <header>
+      <nav class=" bg-gradient-to-r from-blue-950 via-slate-900 to-sky-950 fixed w-full z-20 top-0 left-0 drop-shadow-[10px_5px_10px_rgba(0,36,89,0.7)]">
+         <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-2">
+            <a href="./storePage.html" class="flex items-center">
+               <img src="./img/Logo.svg" class="w-full ml-5" alt="Flowbite Logo">
+               
+            </a>
+            <div class="flex md:order-2">
+               <button onclick="goToLoginPage()" type="button" class="text-white bg-botao-header hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 md:mr-4">Login</button>
+               <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                  <span class="sr-only">Abrir menu</span>
+                  <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                  </svg>
+            </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+            <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+               <li>
+                  <a href="./storePage.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Loja</a>
+               </li>
+               <li>
+                  <a href="./gamesPage.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Jogos</a>
+               </li>
+               
+            </ul>
+            </div>
+         </div>
+      </nav>
+   </header>
+   
+   <!-- //CORPO SITE -->
+   <div class="flex items-center justify-center flex-row">
+      <div class="flex flex-col justify-center items-center mt-16 sm:max-w-[80%] sm:justify-start sm:items-start">
+         <main class="flex justify-center flex-col grow">
+            <h2 class="text-titulos mt-16 font-inter text-2xl text-center font-bold sm:mx-auto mb-3">JOGOS</h2>
+            <!-- DIV PARA OS JOGOS -->
+            <div class="flex justify-center flex-wrap gap-8">
+
+
+               <!-- JOGO 1 -->
+               <div class="flex flex-col justify-center gap-5 items-center bg-secundaria rounded-xl w-72 h-72 pb-5 drop-shadow-[0_5px_12px_rgba(0,36,89,1)]">
+                  <div class=" w-60 h-60 mx-6 mt-6 rounded-xl">
+                     <img src="./img/Jogos/pgsoft-fortune-mouse_mrslotty_pgsoft_desktop_mobile_icon_1681118376083.webp" alt="" class="rounded-xl w-full h-full">
+                  </div>
+                  <p class="mx-4 text-white font-inter font-bold text-lg">FORTUNE MOUSE</p>
+                  <div class="flex flex-row justify-center items-center text-left w-60 h-12">
+                     <button type="button" id="myButton" class=" block bg-gradient-to-r from-botao-header to-sky-900 w-40 h-11 px-3 py-2 rounded-full text-white drop-shadow-[0_5px_16px_rgba(13,110,253,0.5)] hover:from-sky-900 hover:to-sky-600 ">Jogar</button>
+                  </div>
+               </div>
+
+               <!-- JOGO 2 -->
+               <div class="flex flex-col justify-center gap-5 items-center bg-secundaria rounded-xl w-72 h-72 pb-5 drop-shadow-[0_5px_12px_rgba(0,36,89,1)]">
+                  <div class=" w-60 h-60 mx-6 mt-6 rounded-xl">
+                     <img src="./img/Jogos/ot_roulette_infingames_onetouch_desktop_mobile_icon_1627373176874.webp" alt="" class="rounded-xl w-full ">
+                  </div>
+                  <p class="mx-4 text-white font-inter font-bold text-lg">ROLETA</p>
+                  <div class="flex flex-row justify-center items-center text-left w-60 h-12">
+                     <button type="button" id="myButton" class=" block bg-gradient-to-r from-botao-header to-sky-900 w-40 h-11 px-3 py-2 rounded-full text-white drop-shadow-[0_5px_16px_rgba(13,110,253,0.5)] hover:from-sky-900 hover:to-sky-600 ">Jogar</button>
+                  </div>
+               </div>
+               
+               <!-- JOGO 3 -->
+               <div class="flex flex-col justify-center gap-5 items-center bg-secundaria rounded-xl w-72 h-72 pb-5 drop-shadow-[0_5px_12px_rgba(0,36,89,1)]">
+                  <div class=" w-60 h-60 mx-6 mt-6 rounded-xl">
+                     <img src="./img/Jogos/pgsoft-fortune-ox_mrslotty_pgsoft_desktop_mobile_icon_1681118494583.webp" alt="" class="rounded-xl w-full h-full">
+                  </div>
+                  <p class="mx-4 text-white font-inter font-bold text-lg">FORTUNE OX</p>
+                  <div class="flex flex-row justify-center items-center text-left w-60 h-12">
+                     <button type="button" id="myButton" class=" block bg-gradient-to-r from-botao-header to-sky-900 w-40 h-11 px-3 py-2 rounded-full text-white drop-shadow-[0_5px_16px_rgba(13,110,253,0.5)] hover:from-sky-900 hover:to-sky-600 ">Jogar</button>
+                  </div>
+               </div>
+
+               <!-- JOGO 4 -->
+               <div class="flex flex-col justify-center gap-5 items-center bg-secundaria rounded-xl w-72 h-72 pb-5 drop-shadow-[0_5px_12px_rgba(0,36,89,1)]">
+                  <div class=" w-60 h-60 mx-6 mt-6 rounded-xl">
+                     <img src="./img/Jogos/pgsoft-fortune-rabbit_MrSlotty_PGSoft_desktop_mobile_icon_1683042022449.webp" alt="" class="rounded-xl w-full h-full">
+                  </div>
+                  <p class="mx-4 text-white font-inter font-bold text-lg">FORTUNE RABBIT</p>
+                  <div class="flex flex-row justify-center items-center text-left w-60 h-12">
+                     <button type="button" id="myButton" class=" block bg-gradient-to-r from-botao-header to-sky-900 w-40 h-11 px-3 py-2 rounded-full text-white drop-shadow-[0_5px_16px_rgba(13,110,253,0.5)] hover:from-sky-900 hover:to-sky-600 ">Jogar</button>
+                  </div>
+               </div>
+
+               <!-- JOGO 5 -->
+               <div class="flex flex-col justify-center gap-5 items-center bg-secundaria rounded-xl w-72 h-72 pb-5 drop-shadow-[0_5px_12px_rgba(0,36,89,1)]">
+                  <div class=" w-60 h-60 mx-6 mt-6 rounded-xl">
+                     <img src="./img/Jogos/pgsoft-fortune-tiger_mrslotty_pgsoft_desktop_mobile_icon_1687394837935.gif" alt="" class="rounded-xl w-full h-full">
+                  </div>
+                  <p class="mx-4 text-white font-inter font-bold text-lg">FORTUNE TIGER</p>
+                  <div class="flex flex-row justify-center items-center text-left w-60 h-12">
+                     <button type="button" id="myButton" class=" block bg-gradient-to-r from-botao-header to-sky-900 w-40 h-11 px-3 py-2 rounded-full text-white drop-shadow-[0_5px_16px_rgba(13,110,253,0.5)] hover:from-sky-900 hover:to-sky-600 ">Jogar</button>
+                  </div>
+               </div>
+
+               <!-- JOGO 6 -->
+               <div class="flex flex-col justify-center gap-5 items-center bg-secundaria rounded-xl w-72 h-72 pb-5 drop-shadow-[0_5px_12px_rgba(0,36,89,1)]">
+                  <div class=" w-60 h-60 mx-6 mt-6 rounded-xl">
+                     <img src="./img/Jogos/pgsoft-ganesha-fortune_mrslotty_pgsoft_desktop_mobile_icon_1681118408066.webp" alt="" class="rounded-xl w-full h-full">
+                  </div>
+                  <p class="mx-4 text-white font-inter font-bold text-lg">FORTUNE MSRLOTTY</p>
+                  <div class="flex flex-row justify-center items-center text-left w-60 h-12">
+                     <button type="button" id="myButton" class=" block bg-gradient-to-r from-botao-header to-sky-900 w-40 h-11 px-3 py-2 rounded-full text-white drop-shadow-[0_5px_16px_rgba(13,110,253,0.5)] hover:from-sky-900 hover:to-sky-600 ">Jogar</button>
+                  </div>
+               </div>
+               
+            </div>
+         </main>
+      </div>
+   </div>
+   
+      
+
+      
+      
+   </div>
+   <footer class="text-white text-sm mx-auto text-center flex flex-col items-center mt-10 mb-3">
+      <p class="flex flex-row items-start">Desenvolvido com <img src="./img/Loja 2/icons/icon-heart.svg" alt="coração"> por Mestre dos Sinais </p>
+      <span>© Todos os direitos reservados</span>
+   </footer>
+   
+   <script src="./scripts/formValidate.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+   <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+   <script src="./scripts/index.js"></script>
+   <script src="./scripts/points.js"></script>
+</body>
+</html>
